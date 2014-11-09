@@ -1,0 +1,137 @@
+// Screen size variables.
+$iphone-portrait: 320px;
+$iphone-landscape: 480px;
+$six-forty: 640px;
+$ipad-portrait: 768p;
+$ipad-landscape: 1024px;
+$ten-eighty: 1080px;
+$twelve-eighty: 1280px;
+
+$base-size: 16px;
+
+
+// Apply to all grid elements.
+[class*='grid-'] {
+    float: left;
+    padding: 10px;
+}
+
+// Floats the last grid div to the right.
+[class*='grid-']:last-of-type {
+    padding-right: 10px;
+    float: right;
+}
+
+/* Base grid sizes, full desktop.
+===============================*/
+.grid-1 {
+    width: 100%;
+}
+.grid-2 {
+    width: 50%;
+}
+.grid-3 {
+    width: 33.33%;
+}
+.grid-4 {
+    width: 25%;
+}
+.grid-5 {
+    width: 20%;
+}
+.grid-6 {
+    width: 16.6666666667%;
+}
+.grid-7 {
+    width: 14.2857142857%;
+}
+.grid-8 {
+    width: 12.5%;
+}
+.grid-9 {
+    width: 11.1111111111%;
+}
+.grid-10 {
+    width: 10%;
+}
+.grid-11 {
+    width: 9.09090909091%;
+}
+.grid-12 {
+    width: 8.33%;
+}
+
+/* Very large screens.
+===============================*/
+@media only screen and (max-width : 1200px) {
+    .grid-6 {
+        width: 33.33%;
+    }
+
+    .grid-5,
+    .grid-7,
+    .grid-9,
+    .grid-11 {
+        width: 100%;
+    }
+}
+
+/* Medium devices, smaller desktops windows.
+============================================*/
+@media only screen and (max-width : 992px) {
+    .grid-4 {
+        width: 50%;
+    }
+
+    .grid-6 {
+        width: 33.33%;
+    }
+
+    .grid-5,
+    .grid-7,
+    .grid-9,
+    .grid-11 {
+        width: 100%;
+    }
+}
+
+/* Small devices, tablets
+===============================*/
+@media only screen and (max-width : 768px) {
+    .grid-2,
+    .grid-3,
+    .grid-5,
+    .grid-7,
+    .grid-9,
+    .grid-11 {
+        width: 100%;
+    }
+
+    .grid-4 {
+        width: 50%;
+    }
+
+    .grid-6 {
+        width: 33.33%;
+    }
+}
+
+/* Extra small devices, phones
+===============================*/
+@media only screen and (max-width : 480px) {
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5,
+    .grid-6,
+    .grid-7,
+    .grid-8,
+    .grid-9,
+    .grid-10,
+    .grid-11,
+    .grid-12 {
+        width: 100%;
+    }
+}
+
