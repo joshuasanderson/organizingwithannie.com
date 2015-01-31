@@ -1,0 +1,326 @@
+/* Table of Contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Imports
+- Base styles
+- Grid
+- Typography
+- Links
+- Buttons
+- Forms
+- Utility classes
+
+*/
+
+/* Base styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+html {
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; 
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #515151;
+}
+.wrapper {
+    overflow: hidden;
+    margin-top: 125px; // sticky header on non-scroll is 125px high.
+}
+/* Grid system
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+}
+.full-width-container {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+}
+
+.column, .columns {
+    float: left;
+    width: 100%;
+}
+
+// All columns will be enclosed within the .grid
+.grid {
+    margin-bottom: 2em;
+    .column:first-child, .columns:first-child {
+        margin-left: 0;
+    }
+}
+
+// Our grid will kick in when the screen is larger then 768px. 
+// Before that, all elements will have a 100% width.
+@media only screen and (min-width: 769px) {
+    .column,
+    .columns {
+        margin-left: 4%;
+    }
+    .one.column {
+        width: 4.66666666667%;
+    }
+    .two.columns {
+        width: 13.3333333333%;
+    }
+    .three.columns {
+        width: 22%;
+    }
+    .four.columns {
+        width: 30.6666666667%;
+    }
+    .five.columns {
+        width: 39.3333333333%;
+    }
+    .six.columns {
+        width: 48%;
+    }
+    .seven.columns {
+        width: 56.6666666667%;
+    }
+    .eight.columns {
+        width: 65.3333333333%;
+    }
+    .nine.columns {
+        width: 74.0%;
+    }
+    .ten.columns {
+        width: 82.6666666667%;
+    }
+    .eleven.columns {
+        width: 91.3333333333%;
+    }
+    .twelve.columns {
+        width: 100%;
+        margin-left: 0;
+    }
+    // Commonly used columns
+    .one-third.column {
+        width: 30.6666666667%;
+    }
+    .two-thrids-column {
+        width: 65.3333333333%;
+    }
+    .one-half.column {
+        width: 48%;
+    }
+}
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+section {
+    padding: 3em 0;
+}
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $dark-grey;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h1 {
+    font-size: 4.0em;
+}
+h2 {
+    font-size: 3.5em;
+}
+h3 {
+    font-size: 3em;
+}
+h4 {
+    font-size: 2.5em;
+}
+h5 {
+    font-size: 1.5em;
+}
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+a {
+    color: $chocolate;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .1em;
+    font-size: 19px;
+    &:hover {
+        border-bottom: 1px solid $chocolate;
+    }
+}
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+button,
+input[type="submit"],
+.button {
+    height: 50px;
+    width: 150px;
+    letter-spacing: 1px;
+    float: left;
+    display: block;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    
+    &.primary {
+        color: #FFF;
+        background: $palepink;
+        border-bottom: 4px solid $watermelon;
+        
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    &.secondary {
+        color: $white;
+        background-color: $watermelon;
+        border-bottom: 4px solid $palepink;
+        
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    &.small {
+        height: 30px;
+        width: 100px;
+        font-size: 14px;
+    }
+}
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+input[type="email"],
+input[type="search"],
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    border: 1px solid #D1D1D1;
+    height: 36px;
+    padding: 6px 10px;
+    /* The 6px vertically centers text on FF, ignored by Webkit */
+    border-radius: $border-radius;
+    box-shadow: none;
+    background: #fff;
+
+    &.error {
+        border: 2px solid #E74F80;
+    }
+}
+/* Removes awkard default styles on some inputs */
+
+input[type="email"],
+input[type="search"],
+input[type="text"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+textarea {
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 100%;
+}
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid $watermelon;
+    outline: 0;
+}
+label,
+legend {
+    display: block;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+fieldset {
+    border-width: 0;
+    padding: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
+label > .label-body {
+    display: inline-block;
+    font-weight: normal;
+    margin-left: .5rem;
+}
+
+/* Utility classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.no-float {
+    float: none;
+}
+.base-margin {
+    margin: 1em 0;
+}
+.centered {
+    text-align: center;
+}
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.container:after,
+.grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Media queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// For screens >= 400px
+@media only screen and (min-width: 400px) {}
+
+// For screens >= 550px
+@media only screen and (min-width: 650px) {}
+
+// For screens >= 768 px (also when grid kicks in)
+@media only screen and (min-width: 768px) {}
+
+// For screens >= 1000px
+@media only screen and (min-width: 1000px) {}

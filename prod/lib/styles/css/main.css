@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/* Table of Contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Imports
+- Base styles
+- Grid
+- Typography
+- Links
+- Buttons
+
+*/
+/* Imports
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Base styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* line 21, ../sass/main.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 25, ../sass/main.scss */
+body {
+  font-size: 1.6em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #515151;
+}
+
+/* line 33, ../sass/main.scss */
+.wrapper {
+  overflow: hidden;
+  margin-top: 125px;
+}
+
+/* Grid system
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* line 40, ../sass/main.scss */
+.container {
+  position: relative;
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+/* line 47, ../sass/main.scss */
+.container.column, .container.columns {
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* line 56, ../sass/main.scss */
+.grid {
+  margin-bottom: 2em;
+}
+/* line 59, ../sass/main.scss */
+.grid .column:first-child,
+.grid .columns:first-child {
+  margin-left: 0;
+}
+
+@media only screen and (min-width: 550px) {
+  /* line 68, ../sass/main.scss */
+  .container.column, .container.columns {
+    margin-left: 4%;
+  }
+  /* line 73, ../sass/main.scss */
+  .container.one.column {
+    width: 4.66666666667%;
+  }
+  /* line 77, ../sass/main.scss */
+  .container.two.columns {
+    width: 13.3333333333%;
+  }
+  /* line 81, ../sass/main.scss */
+  .container.three.columns {
+    width: 22%;
+  }
+  /* line 85, ../sass/main.scss */
+  .container.four.columns {
+    width: 30.6666666667%;
+  }
+  /* line 89, ../sass/main.scss */
+  .container.five.columns {
+    width: 39.3333333333%;
+  }
+  /* line 93, ../sass/main.scss */
+  .container.six.columns {
+    width: 48%;
+  }
+  /* line 97, ../sass/main.scss */
+  .container.seven.columns {
+    width: 56.6666666667%;
+  }
+  /* line 101, ../sass/main.scss */
+  .container.eight.columns {
+    width: 65.3333333333%;
+  }
+  /* line 105, ../sass/main.scss */
+  .container.nine.columns {
+    width: 74.0%;
+  }
+  /* line 109, ../sass/main.scss */
+  .container.ten.columns {
+    width: 82.6666666667%;
+  }
+  /* line 113, ../sass/main.scss */
+  .container.eleven.columns {
+    width: 91.3333333333%;
+  }
+  /* line 117, ../sass/main.scss */
+  .container.twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
+  /* line 123, ../sass/main.scss */
+  .container.one-third.column {
+    width: 30.6666666667%;
+  }
+  /* line 127, ../sass/main.scss */
+  .container.two-thrids-column {
+    width: 65.3333333333%;
+  }
+  /* line 131, ../sass/main.scss */
+  .container.one-half.column {
+    width: 48%;
+  }
+}
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* line 139, ../sass/main.scss */
+h1, h2, h3, h4, h5 {
+  color: #515151;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 2.5em;
+}
+
+/* line 146, ../sass/main.scss */
+h1 {
+  font-size: 4.0em;
+}
+
+/* line 150, ../sass/main.scss */
+h2 {
+  font-size: 3.5em;
+}
+
+/* line 154, ../sass/main.scss */
+h3 {
+  font-size: 3em;
+}
+
+/* line 158, ../sass/main.scss */
+h4 {
+  font-size: 2.5em;
+}
+
+/* line 162, ../sass/main.scss */
+h5 {
+  font-size: 1.5em;
+}
+
+/* line 167, ../sass/main.scss */
+.main-heading {
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0;
+  margin: auto;
+  height: 40px;
+  color: #515151;
+}
+
+/* line 185, ../sass/main.scss */
+.sub-heading {
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  height: 38px;
+  line-height: 38px;
+  font-weight: 700;
+  color: #603813;
+  background-color: #F79FA8;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* line 201, ../sass/main.scss */
+button, input[type="submit"], .button {
+  display: inline-block;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #E74F80;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #603813;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 30px;
+}

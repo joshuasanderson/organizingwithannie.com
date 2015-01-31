@@ -1,0 +1,446 @@
+/* Table of Contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Imports
+- Base styles
+- Header
+- Section
+- Links
+- Buttons
+- Forms
+- Utility classes
+
+*/
+
+/* Imports
+ * ==================================================================================================== */
+@import "config";
+@import "reset";
+@import "framework";
+
+
+/* Base Styling
+ * ==================================================================================================== */
+BODY {
+    background-color: $white;
+	padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: $body-font-family;
+    font-weight: 300;
+    font-size: $base-font-size;
+    color: $dark-grey2;
+}
+
+// Font Awesome icons
+.fa {
+    color: $brightgreen;
+    
+    &.center {
+        display: block;
+        margin: auto;
+        width: 90px;
+    }
+    
+    &.cursor {
+        cursor: pointer;
+    }
+}
+
+.watermelon {
+    background-color: $watermelon;
+}
+
+.pale-pink {
+    background-color: $palepink;
+}
+
+.chocolate {
+    background-color: $chocolate;
+}
+
+/* Header
+ * ==================================================================================================== */
+header {
+    position: fixed;
+    z-index: 999;
+    height: 125px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+    background: $off-white;
+    overflow: hidden;
+    opacity: 0.9;
+
+    &.scrolling {
+        height: 75px;
+    }
+
+    .main-nav {
+        display: none;
+        line-height: 125px;
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        -ms-transition: height 0.3s;
+        -o-transition: height 0.3s;
+        transition: height 0.3s;
+        overflow: hidden;
+
+        &.scrolling {
+            line-height: 75px;
+        }
+
+        ul {
+            width: 975px;
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                margin-right: 60px;
+                vertical-align: middle;
+                line-height: 1.4em;
+
+                img {
+                    max-width: 100%;
+                    border: none;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    -webkit-transition: height 0.3s;
+                    -moz-transition: height 0.3s;
+                    -ms-transition: height 0.3s;
+                    -o-transition: height 0.3s;
+                    transition: height 0.3s;
+                }
+
+                a {
+                    color: $chocolate;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    letter-spacing: .1em;
+                    font-size: 19px;
+                    -webkit-transition: height 0.3s;
+                    -moz-transition: height 0.3s;
+                    -ms-transition: height 0.3s;
+                    -o-transition: height 0.3s;
+                    transition: height 0.3s;
+
+                    &:hover {
+                        border-bottom: 1px solid $chocolate;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-nav-mobile {
+        display: none;
+        position: relative;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 75px;
+
+        .main-nav-mobile-logo-lg {
+            display: none;        
+        }
+
+        .main-nav-mobile-logo-sm {
+            display: none;
+        }
+
+        #menu-icon {
+            position: absolute;
+            top: 30px;
+            right: 0;
+            width: 22px;
+            height: 18px;
+            background: url("../../imgs/menu-icon.png");
+            cursor: pointer;
+            z-index: 14;
+        }
+    }
+}
+
+// Custom header styles.
+.main-heading {
+      font-size: 2.5em;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 9px;
+      text-transform: uppercase;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      padding: 0;
+      margin: auto;
+      height: 75px;
+      color: $white;
+      text-shadow: 1px 1px 3px $dark-grey;
+}
+
+.sub-heading {
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    height: 75px;
+    line-height: 75px;
+    font-weight: 700;
+    color: $white;    
+    background-color: $watermelon;    
+}
+
+.logo, .main-nav-mobile-logo-lg, .main-nav-mobile-logo-sm {
+    width: 266px;
+}
+
+/* Sections
+ * ==================================================================================================== */
+section {
+
+    &.hero {
+        position: relative;
+        height: 450px;
+        background: url("../../imgs/banner-hero.jpg") no-repeat center center;
+        background-size: cover;
+        margin-bottom: 4em;
+    }
+
+    &.about-section {
+        img {
+            display: block;
+            width: 190px;
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 15px 0 15px 0;
+            text-align: left;
+        }
+    }
+
+    // Every other section is grey background.
+    &.services-section, &.contact-section {
+        background: $light-grey
+    }
+}
+
+/* Testimonials Section
+ * ==================================================================================================== */
+.testimonial {
+
+    background-color: $brightgreen;
+    position: relative;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 1.5em;
+
+    p, p:before, div {
+        color: $white;
+    }
+
+    p {
+        &:before {
+            content: "“";
+            font-family: georgia, serif;
+            font-size: 6em;
+            position: absolute;
+            left: 5px;
+            top: -10px;
+        }
+
+        margin: 0;
+        padding: 2px 5px 3px 45px;
+    }
+
+    div {
+        margin-left: 55px;
+        font-style: italic;
+    }
+}
+
+/* Services Section
+ * ==================================================================================================== */
+
+.service-summary {
+    background: $white;
+    border-bottom: 4px solid $dark-grey3;
+    margin-bottom: 2em;
+    padding: 1em;
+
+    h6 {
+        width: 50%;
+        margin: 0 auto 1em auto;
+        padding: 0;
+        font-size: 1.25em;
+        border-bottom: 4px solid $dark-grey3;
+        text-align: center;
+        color: $watermelon;
+    }
+}
+
+.service-summary:last-child {
+    margin-bottom: 0;
+}
+
+.service-detail {
+    display: none;
+    overflow: hidden;
+    width: 97%;
+    
+    &.open {
+        display: block;
+    }
+}
+
+
+/* Contact Form
+ * ==================================================================================================== */
+#message {
+    display: none;
+    margin-bottom: 15px;
+    color: #E74F80;
+}
+#loading {
+    display: none;
+}
+.contact form {
+    input, textarea {
+		-moz-transition:all .3s ease-in-out;
+		-ms-transition:all .3s ease-in-out;
+		-o-transition:all .3s ease-in-out;
+		-webkit-transition:all .3s ease-in-out;
+		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05) inset;
+		resize: none;
+		font-size:12px;
+		margin-bottom: 15px;
+		letter-spacing:1px;
+		padding: 9px 10px 8px;
+		transition:all .3s ease-in-out;
+		width:100%;
+    }
+    
+    input {
+        height: 40px;
+    }
+    
+    textarea {
+        min-height: 205px;
+        padding-top: 10px;
+    }
+}
+
+/* Gallery Page 
+ * ==================================================================================================== */
+.gallery {
+    .before-after-container {
+        max-height: 600px;
+    }
+}
+
+/* Footer
+ * ==================================================================================================== */
+
+
+/* Media Queries for Tablet Settings 
+ * ==================================================================================================== */
+
+// Screens <= 925px.
+@media only screen and (max-width: 925px) { 
+    header {
+        height: 75px;
+    }
+
+    header nav.main-nav-mobile {
+        display: block;
+    }
+
+    .wrapper {
+        margin-top: 75px;
+    }
+    
+    .before-after-container {
+        max-height: none;
+    }
+}
+
+// Screens >= than 926px
+@media only screen and (min-width: 926px) { 
+    header {
+        height: 125px;
+    }
+
+    header nav.main-nav {
+        display: block;
+    }
+}
+
+// Screens for <= 768
+@media only screen and (max-width: 768px) {
+    .service-summary h6 {
+        width: 100%;
+    }
+}
+
+/* Media Queries for Mobile Settings 
+ * ==================================================================================================== */
+
+// Screens >= than 641px
+@media only screen and (min-width: 641px) { 
+    header nav.main-nav-mobile .main-nav-mobile-logo-lg {
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: 0;
+    }
+}
+
+// Screens <= than 640px
+@media only screen and (max-width: 640px) { 
+    header nav.main-nav-mobile .main-nav-mobile-logo-sm {
+        display: inline-block;
+        position: absolute;
+        top: 27px;
+        left: 0;
+    }
+
+    .main-heading {
+        font-size: 2em;
+        height: 265px;
+    }
+
+    .service-summary, .service-summary h6 {
+        width: 100%;
+    }
+    
+    // Possilbe width where we change the Gallery layout to not have the slider
+}
+
+// Screens <= 320px
+@media only screen and (max-width: 320px) {
+    .overlay .overlay-close {
+        top: 0;
+    }
+
+    .overlay .contact-form-section {
+        margin: 35% auto;
+    }
+    
+    .main-heading {
+        font-size: 1.75em;
+        height: 265px;
+    }
+    
+    header .main-nav-mobile {
+        width: 95%;
+    }
+}
