@@ -18,6 +18,25 @@ $(document).ready(function(){
         }
     });
 
+    // Mobile menu toggle.
+    $('#menu-icon').on('click', function(e) {
+        if($(this).hasClass('open')) {
+            $(this).removeClass('open');
+            $('#mobile-menu').removeClass('open');
+        } else {
+            $(this).addClass('open');
+            $('#mobile-menu').addClass('open');
+        }
+    });
+
+    // When clicking a mobile-menu item, close the mobile-manu.
+    $('.mobile-a').on('click', function(e) {
+        if($('#mobile-menu').hasClass('open')) {
+            $('#menu-icon').removeClass('open');
+            $('#mobile-menu').removeClass('open');
+        }
+    });
+
     // Service Detail Trigger
     $('.service-detail-trigger').on('click', function(e) {
         e.preventDefault();
@@ -45,15 +64,15 @@ $(document).ready(function(){
         if(proceed) {
             $.ajax({
                 beforeSend: function(){
-
+                    $('#loading').show();
                 },
                 type: "POST",
                 url: $('#contact_form').attr('action'),
                 dataType: "json",
                 data: $('#contact_form').serialize()
             }).done(function(response) {
-                console.log(response.type);
-                console.log(response);
+                //console.log(response);
+                $('#loading').hide();
                 messageElem.html(response.msg).show();
                 if(!response.success) {
                     messageElem.addClass('error');
@@ -72,6 +91,13 @@ $(document).ready(function(){
             window.setTimeout(function() {
                 $('div.contact').removeClass('animated shake');
             }, 2000);
+        }
+    });
+
+    $('.question').on('click', function(e) {
+        var answer = $(this).next('.answer');
+        if(answer) {
+            answer.slideToggle('medium');
         }
     });
 

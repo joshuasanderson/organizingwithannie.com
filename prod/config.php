@@ -5,7 +5,6 @@ $IS_DEV = 0;
 $VIEWS_DIRECTORY = 'views/';
 date_default_timezone_set('America/New_York');
 
-// Email settings.
 $SUBJECT = 'Organizing With Annie - Contact Form Submission';
 $SENDER_EMAIL = 'noreply@organizingwithannie.com';
 $TO_EMAIL = 'annie@organizingwithannie.com';
