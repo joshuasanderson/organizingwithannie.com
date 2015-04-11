@@ -17,7 +17,7 @@ require_once('config.php');
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700' rel='stylesheet' type='text/css'>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="lib/styles/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!-- Stylesheets and JavaScript rels -->
     <link rel="stylesheet" href="lib/styles/css/screen.css" />
@@ -98,19 +98,63 @@ require_once('config.php');
     <!-- Main Content -->
     <div class="wrapper">
 
-        <section data-section="home" id="hero">
+        <section class="hero-section">
             <div class="hero-header">
                 <h1 class="hero-h1">Improving your space, time, and quality of life</h1>
                 <div class="hero-h2-wrapper">
                     <h2 class="hero-h2">I want to preserve your memories while sharing the benefits of reusing, recycling, donating, or selling excess belongings.</h2>
                 </div>
             </div>
-            <a href="#about" class="learn-more button primary no-float centered-block">
-                Learn More
-                <span class="centered-block">
-                    <i class="fa fa-arrow-down watermelon"></i>
-                </span>
-            </a>
+        </section>
+
+        <section class="intro-section">
+            <div class="container">
+                <p>
+                    I have been organizing anything and everything I could get my hands on since I was a young child, and now I’m thrilled to be able to share my knowledge, skills, and passion for helping others through professional organizing.  Organizing with Annie will help improve your space, your time, and your quality of life.
+                </p>
+
+                <div class="headlines fill palepink">
+                    <p>
+                        Serving the Cape Cod community, I work with women & families who are experiencing major life transitions.
+                    </p>
+                    <p>
+                        I want to preserve your memories while sharing the benefits of reusing, recycling, donating, or selling     excess belongings.
+                    </p>
+                    <p>
+                        I can help you find the best solutions to make your life easier so you can spend more time with loved ones and caring for yourself.
+                    </p>
+                </div>
+
+                <div class="service-teaser-wrapper grid">
+                    <div class="four columns service-teaser">
+                        <i class="fa fa-home fa-4x"></i>
+                        <p>Garages, basements & attics</p>
+                    </div>
+                    <div class="four columns service-teaser">
+                        <i class="fa fa-desktop fa-4x"></i>
+                        <p>Home office</p>
+                    </div>
+                    <div class="four columns service-teaser">
+                        <i class="fa fa-suitcase fa-4x"></i>
+                        <p>Packing, moving, & unpacking</p>
+                    </div>
+                </div>
+
+                <div class="service-teaser-wrapper grid">
+                    <div class="four columns service-teaser">
+                        <i class="fa fa-graduation-cap fa-4x"></i>
+                        <p>Students moving to college</p>
+                    </div>
+                    <div class="four columns service-teaser">
+                        <i class="fa fa-sort-amount-desc fa-4x"></i>
+                        <p>Seniors downsizing</p>
+                    </div>
+                    <div class="four columns service-teaser">
+                        <i class="fa fa-calendar fa-4x"></i>
+                        <p>Time management</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <h5 id="about" class="sub-heading">MEET ANNIE</h5>

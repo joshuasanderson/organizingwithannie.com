@@ -211,7 +211,7 @@ header {
 .hero-header {
     position: absolute;
     left: 50%;
-    top: 25%;
+    top: 40%;
     width: 100%;
     margin-left: -50%;
     height: 140px;
@@ -235,7 +235,7 @@ header {
 
     .hero-h2 {
         font-size: 21px;
-        font-weight: 400;
+        font-weight: 800;
         text-align: center;
         color: $palepink;
         margin: 0 auto;
@@ -269,16 +269,46 @@ header {
     width: 200px;
 }
 
+// Random
+.fill {
+    &.palepink {
+        p {
+            background-color: $palepink;
+            color: $white;
+            padding: 1em;
+            font-weight: 600;
+            text-align: justify;
+        }
+    }
+}
+
+.service-teaser-wrapper {
+    text-align: center;
+    .service-teaser {
+        .fa {
+            display: block;
+        }
+    }
+}
+
 /* Sections
  * ==================================================================================================== */
 section {
 
-    &#hero {
+    &.hero-section {
         position: relative;
         height: 450px;
         background: url("../../imgs/hero/#{random(3)}.jpg") no-repeat center center;
         background-size: cover;
-        margin-bottom: 4em;
+    }
+
+    &.intro-section {
+        padding-top: 1.5em;
+
+        .headlines {
+            margin-top: 3em;
+            margin-bottom: 3em;
+        }
     }
 
     &.about-section {
